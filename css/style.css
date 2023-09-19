@@ -2,10 +2,12 @@
 @import url('https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.core.min.css');
 @import url('https://cdn.jsdelivr.net/npm/@glidejs/glide/dist/css/glide.theme.min.css');
 @import url(../css/animation.css);
+@import url(../css/buttons.css);
 @import url(../css/collection.css);
 @import url(../css/components.css);
 @import url(../css/footer.css);
 @import url(../css/header.css);
+@import url(../css/item.css);
 @import url(../css/hero.css);
 @import url(../css/register.css);
 @import url(../css/shop.css);
