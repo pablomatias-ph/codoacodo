@@ -1,11 +1,7 @@
-/* BUTTONS STYLES */
-
 .btn {
     border: none;
     cursor: pointer;
 }
-
-/* COLORS */
 
 .btn--primary {
     background-color: var(--primary-solid);
@@ -16,8 +12,6 @@
 .btn--primary:hover {
     background-color: var(--secondary-solid);
 }
-
-/* SIZES */
 
 .btn--medium {
     padding: var(--spacing-8) var(--spacing-16);

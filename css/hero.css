@@ -1,5 +1,3 @@
-/*Hero*/
-
 .hero {
     background-image: url(../imgs/funkos-banner.webp);
     padding: var(--spacing-128);

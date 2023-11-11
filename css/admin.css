@@ -9,7 +9,7 @@
 }
 
 .admin__icon {
-    font-size: var(--font-xlarge);
+    font-size: var(--font-large);
 }
 
 .admin__search-bar {
@@ -32,6 +32,7 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: var(--spacing-24);
+    padding: var(--spacing-8);
 }
 
 .admin__header h2 {
@@ -63,12 +64,12 @@
     grid-template-columns: 40px 1fr 3fr 3fr 40px 40px;
     align-items: center;
     gap: var(--spacing-16);
-    font-size: var(--font-medium);
+    font-size: var(--font-xsmall);
     font-weight: 500;
 }
 
 .admin-table__header {
-    margin-bottom: var(--spacing-24);
+    margin-bottom: var(--spacing-16);
 }
 
 
