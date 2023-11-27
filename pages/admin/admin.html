@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="/css/style.css" />
 </head>
 
-<body>
+<body class="grid-fixed">
   <header><!-- Inicio Header-->
     <nav class="navbar container">
       <picture class="navbar__logo">
@@ -54,8 +54,7 @@
     <section class="admin__list">
       <div class="admin__header">
         <h2>Listado de productos</h2>
-        <span>Agregar<a href="/admin/create"><iconify-icon icon="bxs:plus-square"
-              style="color: #f33;"></iconify-icon></a></span>
+        <a href="/pages/admin/create.html">Agregar<iconify-icon class="admin__icon_secondary " icon="bxs:plus-square"></iconify-icon></a>
       </div>
       <div class="admin-table">
         <header class="admin-table__header">
@@ -69,11 +68,10 @@
           <p>STW001001</p>
           <p>Baby Yoda Blueball</p>
           <p>Star Wars</p>
-          <a href="/admin/edit/<%= item.product_id %>"><iconify-icon icon="mdi:pencil"
-              style="color: #1d84b5;"></iconify-icon></a>
-          <form action="/admin/delete/<%= item.product_id %>?_method=DELETE" method="POST">
+          <a href="/pages/admin/edit.html"><iconify-icon class="admin__icon_secondary" icon="mdi:pencil"></iconify-icon></a>
+          <form action="" method="POST">
             <button class="admin-table__btn-delete" type="submit">
-              <iconify-icon icon="heroicons-solid:trash" style="color: #f33;"></iconify-icon>
+              <iconify-icon class="admin__icon_secondary" icon="heroicons-solid:trash"></iconify-icon>
             </button>
           </form>
         </article>

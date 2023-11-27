@@ -1,8 +1,7 @@
 #login {
-    margin: var(--spacing-68) auto;
+    margin: var(--spacing-24) auto;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: stretch;
     gap: var(--spacing-36);
 }
