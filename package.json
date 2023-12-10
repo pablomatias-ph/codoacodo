@@ -1,0 +1,27 @@
+{
+  "name": "express-server",
+  "version": "1.0.0",
+  "description": "Trabaja final de la formacion en Fullstack Node JS de la academia Codo a Codo diciembre 2023",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "keywords": [
+    "html",
+    "css",
+    "node",
+    "node",
+    "js",
+    "javascript",
+    "express"
+  ],
+  "author": "Pablo Matias Pidone",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
