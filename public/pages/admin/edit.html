@@ -5,20 +5,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Editar producto :: Funkoshop Administrador</title>
-  <link rel="stylesheet" href="/css/style.css" />
+  <link rel="stylesheet" href="../../css/style.css" />
 </head>
 
 <body class="grid-fixed">
   <header><!-- Inicio Header-->
     <nav class="navbar container">
       <picture class="navbar__logo">
-        <a href="/index.html">
-          <img src="/imgs/branding/logo_light_horizontal.svg" alt="Isologotipo de la marca FunkpShop" />
+        <a href="../../index.html">
+          <img src="../../imgs/branding/logo_light_horizontal.svg" alt="Isologotipo de la marca FunkpShop" />
         </a>
       </picture>
       <ul class="navbar__menu">
         <li class="navbar__item with-submenu">
-          <a class="navbar__link with-icon" href="/pages/shop/shop.html">Shop <iconify-icon
+          <a class="navbar__link with-icon" href="../../pages/shop/shop.html">Shop <iconify-icon
               icon="ion:chevron-down"></iconify-icon></a>
           <ul class="submenu">
             <li class="submenu__item">
@@ -33,14 +33,14 @@
           </ul>
         </li>
         <li class="navbar__item">
-          <a class="navbar__link" href="/pages/contact.html">Contacto</a>
+          <a class="navbar__link" href="../../pages/contact.html">Contacto</a>
         </li>
         <li class="navbar__item">
-          <a class="navbar__link" href="/pages/admin/login.html">Login</a>
+          <a class="navbar__link" href="../../pages/admin/login.html">Login</a>
         </li>
         <li class="navbar__item">
-          <a class="navbar__cart" href="/pages/cart.html">
-            <img src="/imgs/icons/cart-icon.svg" alt="Icono del carrito de compras" />
+          <a class="navbar__cart" href="../../pages/cart.html">
+            <img src="../../imgs/icons/cart-icon.svg" alt="Icono del carrito de compras" />
           </a>
         </li>
       </ul>
@@ -49,7 +49,7 @@
   
   <main id="edit" class="container">
     <h2 class="edit__title">Editar producto</h2>
-    <form class="edit__form" action="/admin/edit" method="POST" enctype="application/x-www-form-urlencoded">
+    <form class="edit__form" action="../../pages/admin/edit.html" method="GET" enctype="application/x-www-form-urlencoded">
         <div class="form__flex">
             <div class="form__box--flex">
                 <label class="form__label" for="collection">Categoría:</label>
@@ -105,21 +105,21 @@
                     <option value="9">9 cuotas s/ interés</option>
                     <option value="12">12 cuotas s/ interés</option>
                     <option value="18">18 cuotas s/ interés</option>
-                    <option value="24">24 cuotas s/ interés</option>
+                    <option value="24">24 cuotas s/ interés</option>../..
                 </select>
             </div>
         </div>
         <div class="form__box--flex">
             <label class="form__label" for="images">Imagenes:</label>
-            <input type="file" name="images" id="img" multiple>
+            <input class="form__btn btn btn--large" type="file" name="images" id="img" multiple>
         </div>
         <div class="form__box--flex">
             <div class="edit__img">
-                <img src="/imgs/harry-potter/hermione-1.webp" alt="Figura Funko coleccionable de Hermione">
+                <img src="../../imgs/harry-potter/hermione-1.webp" alt="Figura Funko coleccionable de Hermione">
                 <p class="edit__img-side">Frente</p>
             </div>
             <div class="edit__img">
-                <img src="/imgs/harry-potter/hermione-box.webp" alt="Figura Funko coleccionable de Hermione en caja">
+                <img src="../../imgs/harry-potter/hermione-box.webp" alt="Figura Funko coleccionable de Hermione en caja">
                 <p class="edit__img-side">Dorso</p>
             </div>
         </div>
@@ -133,26 +133,26 @@
     <nav class="navbar container">
       <ul class="navbar__item">
         <li class="navbar__item">
-          <a class="navbar__link" href="/pages/shop/shop.html">Shop</a>
+          <a class="navbar__link" href="../../pages/shop/shop.html">Shop</a>
         </li>
         <li class="navbar__item">
-          <a class="navbar__link" href="/pages/admin/register.html">Registrase</a>
+          <a class="navbar__link" href="../../pages/admin/register.html">Registrase</a>
         </li>
         <li class="navbar__item">
-          <a class="navbar__link" href="/pages/admin/login.html">Ingresar</a>
+          <a class="navbar__link" href="../../pages/admin/login.html">Ingresar</a>
         </li>
         <li class="navbar__item">
-          <a class="navbar__link" href="/pages/contact.html">Contacto</a>
+          <a class="navbar__link" href="../../pages/contact.html">Contacto</a>
         </li>
       </ul>
       <picture>
-        <img src="/imgs/branding/isotype.svg" alt="Isotipo de la marca FunkoShop" />
+        <img src="../../imgs/branding/isotype.svg" alt="Isotipo de la marca FunkoShop" />
       </picture>
     </nav>
     <p class="footer__copy">Todos los derechos reservados 2023 - FunkoShop</p>
   </footer><!--Fin Footer-->
   <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.8/dist/iconify-icon.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@glidejs/glide"></script>
-  <script src="/js/glide.js"></script>
+  <script src="../js/glide.js"></script>
 </body>
 </html>
