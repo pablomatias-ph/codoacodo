@@ -1,8 +1,15 @@
 const express = require("express");
 const app = express();
-const PORT = 3001;
+const { notFound } = require('./src/utils/errorHannlder');
+require('dotenv').config();
+
+/* Puerto */ 
+const PORT = process.env.PORT;
+
+/* Importa las rutas */
 const itemsRoutes = require('./src/routes/itemsRoutes.js')
 const categoriesRoutes = require('./src/routes/categoriesRoutes.js')
+
 
 /* Carpeta estatica */
 app.use(express.static('public'));
@@ -11,7 +18,10 @@ app.use(express.static('public'));
 app.use(express.urlencoded());
 app.use(express.json());
 
-/* Rutas */
+/* Respuesta al error */
+// app.use(notFound);
+
+/* Middleware rutas */
 app.use('/', itemsRoutes);
 app.use('/', categoriesRoutes);
 
