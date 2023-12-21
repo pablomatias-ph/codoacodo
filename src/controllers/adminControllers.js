@@ -41,7 +41,6 @@ module.exports = {
     const { data: categories } = await CategoryService.getAllItemsCategories();
     const { data: licences } = await LicenceService.getAllItemsLicences();
     const { data } = await ItemsService.getItem(id);
-    console.log(categories, licences);
     res.render('./admin/edit', {
       view: {
         title: `Editar producto #${id} : Funkoshop`

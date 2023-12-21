@@ -7,7 +7,7 @@ module.exports = {
     const { data } = items;
     res.render( './shop/shop',{
       view: {
-        title: "Shop | Funkoshop"
+        title: "Tienda de Funkos | Funkoshop"
       },
       items: data
     });
@@ -21,9 +21,9 @@ module.exports = {
       res.status(404).send('El producto con el ID seleccionado no existe o fue eliminado');
     }
 
-    res.render('./shop/detail', {
+    res.render('./shop/item', {
       view: {
-        title: "Item | Funkoshop"
+        title: "Producto | Funkoshop"
       },
       item: data[0],
       enableGlide: true

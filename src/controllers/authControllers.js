@@ -6,7 +6,7 @@ const userCredentials = {
   module.exports = {
     loginView:  (req, res) => res.render('./auth/login', {
       view: {
-        title: 'Login | Funkoshop'
+        title: 'Ingreso a la tienda | Funkoshop'
       }
     }),
     loginUser:  (req, res) => {
@@ -25,12 +25,12 @@ const userCredentials = {
     },
     registerView:  (req, res) => res.render('./auth/register', {
       view: {
-        title: 'Register | Funkoshop'
+        title: 'Regístrese en la tienda | Funkoshop'
       }
     }),
-    registerUser:  (req, res) => res.send('Register Route that receive the data when user click register button'),
+    registerUser:  (req, res) => res.send('Ingresa los datos de registro del usuario'),
     logoutUser:  (req, res) => {
       req.session.isLogged = false;
-      res.send('Sesión finalizada con éxito.')
+      res.send('Fin de la sesión')
     },
   }

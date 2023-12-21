@@ -5,12 +5,13 @@ module.exports = {
     const licences = await LicenceService.getAllItemsLicences();
     res.render("home", {
       view: {
-        title: "Home | Funkoshop",
+        title: "Bienvenidos a la tienda | Funkoshop",
       },
       collections: licences.data,
       enableGlide: true,
     });
   },
+  
   contactView: (req, res) =>
     res.render("contact", {
       view: {
