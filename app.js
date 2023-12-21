@@ -1,29 +1,52 @@
-const express = require("express");
+const express = require('express');
 const app = express();
-const { notFound } = require('./src/utils/errorHannlder');
+const path = require('path');
+const methodOverride = require('method-override');
+// const { initSession } = require('./src/utils/sessions');
 require('dotenv').config();
+
+
+/* Importa las rutas */
+const mainRoutes = require('./src/router/mainRoutes');
+const shopRoutes = require('./src/router/shopRoutes');
+const adminRoutes = require('./src/router/adminRoutes');
+const authRoutes = require('./src/router/authRoutes');
+const { notFound } = require('./src/utils/errorHandlers');
 
 /* Puerto */ 
 const PORT = process.env.PORT;
 
-/* Importa las rutas */
-const itemsRoutes = require('./src/routes/itemsRoutes.js')
-const categoriesRoutes = require('./src/routes/categoriesRoutes.js')
+/* Templates EJS */
+app.set('view engine', 'ejs');
+app.set('views', path.resolve(__dirname, "./src/views"));
 
+/* Sesion de usuario */
+// app.use(initSession());
 
-/* Carpeta estatica */
-app.use(express.static('public'));
+/* User logueado */
+// app.use((req, res, next) => {
+//     res.locals.isLogged = req.session.isLogged;
+//     next();
+//   });
 
 /* Parseo los datos */
 app.use(express.urlencoded());
 app.use(express.json());
 
-/* Respuesta al error */
-// app.use(notFound);
+/* Motodo OverRride para PUT y DELETE */
+app.use(methodOverride('_method'));
 
 /* Middleware rutas */
-app.use('/', itemsRoutes);
-app.use('/', categoriesRoutes);
+app.use('/', mainRoutes);
+app.use('/shop', shopRoutes);
+app.use('/admin', adminRoutes);
+app.use('/auth', authRoutes);
+
+/* Carpeta estatica */
+app.use(express.static(path.resolve(__dirname, "public")));
+
+/* Respuesta al error */
+app.use(notFound);
 
 /* Inicia el servidor */
 app.listen(PORT, () => console.log(`Server corriendo en ${PORT}`));

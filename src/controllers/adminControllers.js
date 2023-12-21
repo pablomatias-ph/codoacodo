@@ -8,7 +8,7 @@ module.exports = {
     res.render( './admin/admin',
     {
       view: {
-        title: 'List of Products | Admin Funkoshop'
+        title: 'Lista de productos de la tienda : Funkoshop'
       },
       items: data
     });
@@ -19,7 +19,7 @@ module.exports = {
 
     res.render('./admin/create', {
       view: {
-        title: 'Create Product | Admin Funkoshop'
+        title: 'Agregar nuevo producto : Funkoshop'
       },
       categories,
       licences
@@ -44,7 +44,7 @@ module.exports = {
     console.log(categories, licences);
     res.render('./admin/edit', {
       view: {
-        title: `Edit Product #${id} | Admin Funkoshop`
+        title: `Editar producto #${id} : Funkoshop`
       },
       item: data[0],
       categories,

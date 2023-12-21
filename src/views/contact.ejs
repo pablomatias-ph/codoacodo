@@ -1,0 +1,26 @@
+<%- include ('partials/header') %>
+<main id="contact" class="container">
+    <article class="contact__title">
+      <h2>Contacto Funkoshop</h2>
+    </article>
+    <form class="register__form" action="../pages/admin/admin.html" method="get"
+      enctype="application/x-www-form-urlencoded">
+      <div class="form__box--grid">
+        <label class="form__label" for="name">Nombre:</label>
+        <input class="form__input" type="text" name="name" id="name" placeholder="Nombre" required>
+      </div>
+      <div class="form__box--grid">
+        <label class="form__label" for="email">Email:</label>
+        <input class="form__input" type="email" name="email" id="email" placeholder="usuario@email.com" required>
+      </div>
+      <div class="form__box--grid">
+        <label class="form__label" for="mensage">Mensaje:</label>
+        <textarea class="textarea" rows="10" type="text" name="mesage" id="message" placeholder="Mensaje"
+          required></textarea>
+      </div>
+      <div class="contact__button">
+      <button class="contact__boton" type="submit">Enviar</button>
+    </div>
+    </form>
+</main>
+<%- include ('partials/footer') %>

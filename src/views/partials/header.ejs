@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Funkoshop ::: Bienvenidos a la tienda</title>
+  <title><%= view.title %></title>
   <link rel="stylesheet" href="./css/style.css" />
 </head>
 
@@ -12,14 +12,13 @@
   <header><!-- Inicio Header-->
     <nav class="navbar container">
       <picture class="navbar__logo">
-        <a href="./index.html">
+        <a href="/">
           <img src="./imgs/branding/logo_light_horizontal.svg" alt="Isologotipo de la marca FunkpShop" />
         </a>
       </picture>
       <ul class="navbar__menu">
         <li class="navbar__item with-submenu">
-          <a class="navbar__link with-icon" href="./pages/shop/shop.html">Shop <iconify-icon
-              icon="ion:chevron-down"></iconify-icon></a>
+          <a class="navbar__link with-icon" href="/shop">Shop <iconify-icon icon="tabler:chevron-down" style="color: white;"></iconify-icon></a>
           <ul class="submenu">
             <li class="submenu__item">
               <a href="" class="submenu__link">Funkos</a>
@@ -33,7 +32,7 @@
           </ul>
         </li>
         <li class="navbar__item">
-          <a class="navbar__link" href="./pages/contact.html">Contacto</a>
+          <a class="navbar__link" href="/contact">Contacto</a>
         </li>
         <li class="navbar__item">
           <a class="navbar__link" href="./pages/admin/login.html">Login</a>
