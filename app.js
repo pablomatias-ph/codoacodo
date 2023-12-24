@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const path = require('path');
 const methodOverride = require('method-override');
-// const { initSession } = require('./src/utils/sessions');
+const { initSession } = require('./src/utils/sessions');
 require('dotenv').config();
 
 
@@ -21,13 +21,13 @@ app.set('view engine', 'ejs');
 app.set('views', path.resolve(__dirname, "./src/views"));
 
 /* Sesion de usuario */
-// app.use(initSession());
+app.use(initSession());
 
 /* User logueado */
-// app.use((req, res, next) => {
-//     res.locals.isLogged = req.session.isLogged;
-//     next();
-//   });
+app.use((req, res, next) => {
+    res.locals.isLogged = req.session.isLogged;
+    next();
+  });
 
 /* Parseo los datos */
 app.use(express.urlencoded());
@@ -49,4 +49,4 @@ app.use(express.static(path.resolve(__dirname, "public")));
 app.use(notFound);
 
 /* Inicia el servidor */
-app.listen(PORT, () => console.log(`Server corriendo en ${PORT}`));
+app.listen(PORT, () => console.log(`Server corriendo en ${PORT}`))

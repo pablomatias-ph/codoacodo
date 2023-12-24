@@ -21,7 +21,7 @@ module.exports = {
       res.status(404).send('El producto con el ID seleccionado no existe o fue eliminado');
     }
 
-    res.render('./shop/item', {
+    res.render('./shop/detail', {
       view: {
         title: "Producto | Funkoshop"
       },

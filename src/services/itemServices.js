@@ -8,6 +8,10 @@ const getItem = async (id) => {
   return await ItemModel.getOne({product_id: id});
 }
 
+const getLicences = async (licence_id) => {
+  return await ItemModel.getLicences(licence_id);
+}
+
 const createItem = async (item, files) => {
   const itemSchema = {
     product_name: item.name,
@@ -25,7 +29,7 @@ const createItem = async (item, files) => {
   return await ItemModel.create([Object.values(itemSchema)]);
 }
 
-const editItem = async (item, id) => {
+const editItem = async (item, id, files) => {
   const itemSchema = {
     product_name: item.name,
     product_description: item.description,
@@ -34,12 +38,14 @@ const editItem = async (item, id) => {
     discount: item.discount,
     sku: item.sku,
     dues: item.dues,
-    image_front: '/imagen_front',
-    image_back: '/imagen_front',
+    image_front: '/'+files[0].filename,
+    image_back: '/'+files[1].filename,
     licence_id: item.collection,
-    category_id: item.category
+    category_id: item.category,
+  
   }
 
+  
   return await ItemModel.edit(itemSchema, {product_id: id});
 }
 
@@ -52,5 +58,6 @@ module.exports = {
   getItem,
   create: createItem,
   edit: editItem,
-  delete: deleteItem
+  delete: deleteItem,
+  getLicences
 }

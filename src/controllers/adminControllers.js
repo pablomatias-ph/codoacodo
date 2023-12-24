@@ -53,8 +53,8 @@ module.exports = {
   editItem:  async (req, res) => {
     const id = req.params.id;
     const item = req.body;
-
-    await ItemsService.edit(item, id);
+    const files = req.files;
+    await ItemsService.edit(item, id, files);
     res.redirect('/admin');
   },
   deleteItem:  async (req, res) => {

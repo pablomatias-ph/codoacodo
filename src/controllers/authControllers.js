@@ -1,9 +1,12 @@
+const LicenceService = require("../services/licenceService");
+
 const userCredentials = {
     email: 'funkoshop@gmail.com',
     password: 'soyunfunko'
   }
+
   
-  module.exports = {
+module.exports = {
     loginView:  (req, res) => res.render('./auth/login', {
       view: {
         title: 'Ingreso a la tienda | Funkoshop'
@@ -20,8 +23,8 @@ const userCredentials = {
         res.locals.isLogged = true;
         return res.redirect('/admin');
       }
-  
-      return res.status(401).send('Credenciales inválidas');
+  return res.status(401).send('Credenciales inválidas');
+        
     },
     registerView:  (req, res) => res.render('./auth/register', {
       view: {
@@ -29,8 +32,7 @@ const userCredentials = {
       }
     }),
     registerUser:  (req, res) => res.send('Ingresa los datos de registro del usuario'),
-    logoutUser:  (req, res) => {
-      req.session.isLogged = false;
-      res.send('Fin de la sesión')
-    },
-  }
+    logoutUser: async (req, res) => {
+      req.session.isLogged = false; 
+      return res.redirect('/');
+}}

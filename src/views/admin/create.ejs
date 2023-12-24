@@ -1,4 +1,6 @@
 <%- include ('../partials/header') %>
+<body class="grid-fixed">
+
 <main id="create" class="container">
     <h2 class="create__title">Crear nuevo item</h2>
     <form class="create__form" action="/admin/create" method="POST" enctype="multipart/form-data">
@@ -70,5 +72,7 @@
           <input class="form__btn btn btn--primary btn--large" type="reset" value="Limpiar">
       </div>
   </form>
+
+  
 </main>
 <%- include ('../partials/footer') %>
